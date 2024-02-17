@@ -90,4 +90,11 @@ git checkout <branch>
 # Remove previously checked-out branch. Use this command to check-out a branch properly. Otherwise your previous commits will be pushed to the current checked-out branch
 git branch -D <branch>
 
+# Pick the commits you want to add to your working branch. Important command when you are developing an app with multiple developers working on.
+git cherry-pick <commit> <commit> <commit> <commit> ...
+
+git fetch
+
+git pull
+
 ```
