@@ -74,6 +74,12 @@ git add --all
 git commit -m 'Commit message'
 git push origin
 
+# Restore all un-staged commits
+git restore .
+
+# Restore specific file
+git restore <file_name.file_extension>
+
 # Important command when you fucked up but do not use this in a branch with CI/CD
 git reset --hard <commit>
 git push -f
