@@ -116,6 +116,7 @@ git push origin --force --all
 
 # Migrate Repository
 git clone --bare <source_repo_https_url>
+cd <repository_directory>
 git push --mirror <target_repo_https_url>
 
 ```
