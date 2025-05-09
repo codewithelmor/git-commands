@@ -103,4 +103,19 @@ git fetch
 
 git pull
 
+# Remove remote branch not in checkout also not in remote server
+git fetch --prune
+
+
+# Remove the trace of a specific file through out the commit history
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch "<directory>/<filename>"' --prune-empty --tag-name-filter cat -- --all
+Remove-Item -Recurse -Force .git\refs\original
+git reflog expire --expire=now --all
+git gc --prune=now
+git push origin --force --all
+
+# Migrate Repository
+git clone --bare <source_repo_https_url>
+git push --mirror <target_repo_https_url>
+
 ```
